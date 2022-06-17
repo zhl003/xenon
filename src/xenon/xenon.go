@@ -9,16 +9,21 @@
 package main
 
 import (
-	"build"
-	"config"
-	"ctl"
 	"flag"
 	"fmt"
 	_ "net/http/pprof"
 	"os"
-	"raft"
-	"server"
-	"xbase/xlog"
+
+	"github.com/radondb/xenon/src/build"
+	"github.com/radondb/xenon/src/ctl"
+
+	"github.com/radondb/xenon/src/server"
+
+	"github.com/radondb/xenon/src/config"
+
+	"github.com/radondb/xenon/src/raft"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
 )
 
 var (
@@ -28,7 +33,7 @@ var (
 
 func init() {
 	flag.StringVar(&flag_conf, "c", "", "xenon config file")
-	flag.StringVar(&flag_conf, "config", "", "xenon config file")
+	flag.StringVar(&flag_conf, "github.com/radondb/xenon/src/config", "", "xenon config file")
 	flag.StringVar(&flag_role, "r", "", "role type:[LEADER|FOLLOWER|IDLE]")
 	flag.StringVar(&flag_role, "role", "", "role type:[LEADER|FOLLOWER|IDLE]")
 }

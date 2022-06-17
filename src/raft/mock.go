@@ -9,16 +9,22 @@
 package raft
 
 import (
-	"config"
 	"fmt"
-	"model"
-	"mysql"
 	"os"
 	"testing"
 	"time"
-	"xbase/common"
-	"xbase/xlog"
-	"xbase/xrpc"
+
+	"github.com/radondb/xenon/src/xbase/common"
+
+	"github.com/radondb/xenon/src/mysql"
+
+	"github.com/radondb/xenon/src/config"
+
+	"github.com/radondb/xenon/src/model"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/xrpc"
 
 	"github.com/stretchr/testify/assert"
 )

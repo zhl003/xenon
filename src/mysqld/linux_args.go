@@ -9,9 +9,10 @@
 package mysqld
 
 import (
-	"config"
 	"fmt"
 	"path/filepath"
+
+	"github.com/radondb/xenon/src/config"
 )
 
 var (

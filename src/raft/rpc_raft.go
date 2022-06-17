@@ -9,8 +9,9 @@
 package raft
 
 import (
-	"model"
 	"strconv"
+
+	"github.com/radondb/xenon/src/model"
 )
 
 // RaftRPC tuple.

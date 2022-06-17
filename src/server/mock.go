@@ -9,16 +9,21 @@
 package server
 
 import (
-	"config"
 	"fmt"
-	"mysql"
-	"mysqld"
 	"os"
-	"raft"
 	"testing"
-	"xbase/common"
-	"xbase/xlog"
-	"xbase/xrpc"
+
+	"github.com/radondb/xenon/src/mysql"
+	"github.com/radondb/xenon/src/mysqld"
+	"github.com/radondb/xenon/src/xbase/common"
+
+	"github.com/radondb/xenon/src/config"
+
+	"github.com/radondb/xenon/src/raft"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/xrpc"
 
 	"github.com/stretchr/testify/assert"
 )

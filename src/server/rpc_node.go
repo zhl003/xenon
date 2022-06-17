@@ -9,7 +9,7 @@
 package server
 
 import (
-	"model"
+	"github.com/radondb/xenon/src/model"
 )
 
 type NodeRPC struct {

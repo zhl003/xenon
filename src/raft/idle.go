@@ -9,7 +9,7 @@
 package raft
 
 import (
-	"model"
+	"github.com/radondb/xenon/src/model"
 )
 
 // IDLE is a special STATE with other FOLLOWER/CANDICATE/LEADER states.

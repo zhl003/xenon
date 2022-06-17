@@ -10,8 +10,9 @@ package mysql
 
 import (
 	"database/sql"
+
 	"github.com/pkg/errors"
-	"xbase/common"
+	"github.com/radondb/xenon/src/xbase/common"
 
 	// driver.
 	_ "github.com/go-sql-driver/mysql"

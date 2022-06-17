@@ -9,8 +9,9 @@
 package raft
 
 import (
-	"model"
-	"xbase/xrpc"
+	"github.com/radondb/xenon/src/model"
+
+	"github.com/radondb/xenon/src/xbase/xrpc"
 )
 
 // Peer tuple.

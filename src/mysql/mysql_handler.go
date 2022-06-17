@@ -10,7 +10,8 @@ package mysql
 
 import (
 	"database/sql"
-	"model"
+
+	"github.com/radondb/xenon/src/model"
 )
 
 // MysqlHandler interface.

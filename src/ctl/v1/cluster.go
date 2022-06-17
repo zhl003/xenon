@@ -12,9 +12,11 @@ import (
 	"net/http"
 	"strings"
 
-	"cli/callx"
-	"server"
-	"xbase/xlog"
+	"github.com/radondb/xenon/src/cli/callx"
+
+	"github.com/radondb/xenon/src/server"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
 
 	"github.com/ant0ine/go-json-rest/rest"
 )

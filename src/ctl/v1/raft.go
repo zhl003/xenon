@@ -11,10 +11,13 @@ package v1
 import (
 	"net/http"
 
-	"cli/callx"
-	"model"
-	"server"
-	"xbase/xlog"
+	"github.com/radondb/xenon/src/cli/callx"
+
+	"github.com/radondb/xenon/src/server"
+
+	"github.com/radondb/xenon/src/model"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
 
 	"github.com/ant0ine/go-json-rest/rest"
 )

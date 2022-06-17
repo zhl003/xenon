@@ -9,8 +9,9 @@
 package mysqld
 
 import (
-	"model"
 	"sync/atomic"
+
+	"github.com/radondb/xenon/src/model"
 )
 
 // IncBackups used to increase the backup counter.

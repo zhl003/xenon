@@ -14,9 +14,11 @@ import (
 	"net/http"
 	_ "net/http/pprof"
 
-	"server"
-	"xbase/xlog"
-	"xbase/xrpc"
+	"github.com/radondb/xenon/src/server"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/xrpc"
 
 	"github.com/ant0ine/go-json-rest/rest"
 )

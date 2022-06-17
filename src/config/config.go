@@ -325,8 +325,8 @@ func (c *LogConfig) UnmarshalJSON(b []byte) error {
 }
 
 type Config struct {
-	Server      *ServerConfig      `json:"server"`
-	Raft        *RaftConfig        `json:"raft"`
+	Server      *ServerConfig      `json:"github.com/radondb/xenon/src/server"`
+	Raft        *RaftConfig        `json:"github.com/radondb/xenon/src/raft"`
 	Mysql       *MysqlConfig       `json:"mysql"`
 	Replication *ReplicationConfig `json:"replication"`
 	Backup      *BackupConfig      `json:"backup"`

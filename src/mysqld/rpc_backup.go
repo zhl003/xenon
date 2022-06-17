@@ -9,7 +9,7 @@
 package mysqld
 
 import (
-	"model"
+	"github.com/radondb/xenon/src/model"
 )
 
 // BackupRPC tuple.

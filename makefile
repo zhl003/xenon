@@ -1,6 +1,6 @@
 PREFIX    :=/usr/local
-export GOPATH := $(shell pwd)
-export PATH := $(GOPATH)/bin:$(PATH)
+# export GOPATH := $(shell pwd)
+# export PATH := $(GOPATH)/bin:$(PATH)
 
 build: LDFLAGS   += $(shell GOPATH=${GOPATH} src/build/ldflags.sh)
 build:
@@ -38,25 +38,25 @@ test:
 	@$(MAKE) testctl
 
 testcommon:
-	go test -v xbase/common
+	go test -v github.com/radondb/xenon/src/xbase/common
 testlog:
-	go test -v xbase/xlog
+	go test -v github.com/radondb/xenon/src/xbase/xlog
 testrpc:
-	go test -v xbase/xrpc
+	go test -v github.com/radondb/xenon/src/xbase/xrpc
 testconfig:
-	go test -v config
+	go test -v github.com/radondb/xenon/src/config
 testmysql:
-	go test -v mysql
+	go test -v github.com/radondb/xenon/src/mysql
 testmysqld:
-	go test -v mysqld
+	go test -v github.com/radondb/xenon/src/mysqld
 testserver:
-	go test -v server
+	go test -v github.com/radondb/xenon/src/server
 testraft:
-	go test -v raft
+	go test -v github.com/radondb/xenon/src/raft
 testcli:
-	go test -v cli/cmd
+	go test -v github.com/radondb/xenon/src/cli/cmd
 testctl:
-	go test -v ctl/v1
+	go test -v github.com/radondb/xenon/src/ctl/v1
 
 COVPKGS = xbase/common\
 		  xbase/xlog\

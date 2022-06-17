@@ -9,13 +9,17 @@
 package mysql
 
 import (
-	"config"
 	"database/sql"
 	"fmt"
-	"model"
 	"testing"
-	"xbase/xlog"
-	"xbase/xrpc"
+
+	"github.com/radondb/xenon/src/config"
+
+	"github.com/radondb/xenon/src/model"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/xrpc"
 
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"

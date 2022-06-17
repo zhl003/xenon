@@ -195,9 +195,9 @@ func init() {
 	// Cobra supports Persistent Flags, which, if defined here,
 	// will be global for your application.
 {{ if .viper }}
-	RootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.{{ .appName }}.yaml)")
+	RootCmd.PersistentFlags().StringVar(&cfgFile, "github.com/radondb/xenon/src/config", "", "config file (default is $HOME/.{{ .appName }}.yaml)")
 {{ else }}
-	// RootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.{{ .appName }}.yaml)")
+	// RootCmd.PersistentFlags().StringVar(&cfgFile, "github.com/radondb/xenon/src/config", "", "config file (default is $HOME/.{{ .appName }}.yaml)")
 {{ end }}	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
 	RootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")

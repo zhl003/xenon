@@ -9,7 +9,7 @@
 package raft
 
 import (
-	"model"
+	"github.com/radondb/xenon/src/model"
 )
 
 // HARPC tuple.

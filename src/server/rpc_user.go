@@ -10,8 +10,10 @@ package server
 
 import (
 	"fmt"
-	"model"
-	"raft"
+
+	"github.com/radondb/xenon/src/raft"
+
+	"github.com/radondb/xenon/src/model"
 )
 
 type UserRPC struct {

@@ -18,14 +18,14 @@ import (
 func TestParseConfig(t *testing.T) {
 	data := []byte(
 		`{
-	"server":
+	"github.com/radondb/xenon/src/server":
 	{
 		"endpoint":"127.0.0.1:8080",
 		"enable-apis":false,
 		"peer-address":":6060"
 	},
 
-	"raft":
+	"github.com/radondb/xenon/src/raft":
 	{
 		"meta-datadir":".",
 		"heartbeat-timeout":1000,

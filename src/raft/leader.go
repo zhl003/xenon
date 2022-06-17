@@ -9,11 +9,13 @@
 package raft
 
 import (
-	"model"
 	"strings"
 	"sync"
 	"time"
-	"xbase/common"
+
+	"github.com/radondb/xenon/src/xbase/common"
+
+	"github.com/radondb/xenon/src/model"
 )
 
 // Leader tuple.

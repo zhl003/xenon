@@ -9,9 +9,10 @@
 package mysqld
 
 import (
-	"config"
 	"strings"
 	"testing"
+
+	"github.com/radondb/xenon/src/config"
 
 	"github.com/stretchr/testify/assert"
 )

@@ -9,7 +9,7 @@
 package xrpc
 
 import (
-	"xbase/xlog"
+	"github.com/radondb/xenon/src/xbase/xlog"
 )
 
 var (

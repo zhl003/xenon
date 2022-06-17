@@ -9,13 +9,17 @@
 package mysqld
 
 import (
-	"config"
 	"fmt"
-	"model"
 	"testing"
 	"time"
-	"xbase/common"
-	"xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/common"
+
+	"github.com/radondb/xenon/src/config"
+
+	"github.com/radondb/xenon/src/model"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
 
 	"github.com/stretchr/testify/assert"
 )

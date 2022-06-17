@@ -12,13 +12,14 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	"github.com/pkg/errors"
 	"io"
 	"os/exec"
 	"strings"
 	"sync/atomic"
 	"time"
-	"xbase/xlog"
+
+	"github.com/pkg/errors"
+	"github.com/radondb/xenon/src/xbase/xlog"
 )
 
 func RunCommand(cmds string, args ...string) (string, error) {

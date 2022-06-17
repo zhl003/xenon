@@ -11,7 +11,8 @@ package common
 import (
 	"runtime"
 	"testing"
-	"xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
 
 	"github.com/stretchr/testify/assert"
 )

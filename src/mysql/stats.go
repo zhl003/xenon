@@ -9,8 +9,9 @@
 package mysql
 
 import (
-	"model"
 	"sync/atomic"
+
+	"github.com/radondb/xenon/src/model"
 )
 
 // IncMysqlDowns used to increase the mysql down counter.

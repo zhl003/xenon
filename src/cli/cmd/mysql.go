@@ -9,15 +9,18 @@
 package cmd
 
 import (
-	"cli/callx"
 	"encoding/json"
 	"fmt"
-	"model"
 	"path"
 	"strconv"
 	"strings"
 	"time"
-	"xbase/common"
+
+	"github.com/radondb/xenon/src/cli/callx"
+
+	"github.com/radondb/xenon/src/xbase/common"
+
+	"github.com/radondb/xenon/src/model"
 
 	"github.com/spf13/cobra"
 )

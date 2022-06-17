@@ -10,8 +10,9 @@ package mysqld
 
 import (
 	"fmt"
-	"model"
 	"time"
+
+	"github.com/radondb/xenon/src/model"
 )
 
 // MysqldRPC tuple.

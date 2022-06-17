@@ -9,9 +9,10 @@
 package raft
 
 import (
-	"model"
 	"sync/atomic"
 	"time"
+
+	"github.com/radondb/xenon/src/model"
 )
 
 // IncLeaderPromotes counter.

@@ -11,12 +11,16 @@ package cmd
 import (
 	"errors"
 	"fmt"
-	"raft"
-	"server"
 	"testing"
 	"time"
-	"xbase/common"
-	"xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/common"
+
+	"github.com/radondb/xenon/src/server"
+
+	"github.com/radondb/xenon/src/raft"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
 
 	"github.com/stretchr/testify/assert"
 )

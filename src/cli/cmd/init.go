@@ -11,7 +11,8 @@ package cmd
 import (
 	"fmt"
 	"strings"
-	"xbase/common"
+
+	"github.com/radondb/xenon/src/xbase/common"
 
 	"github.com/spf13/cobra"
 )

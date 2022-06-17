@@ -9,11 +9,14 @@
 package mysql
 
 import (
-	"config"
 	"fmt"
-	"model"
 	"testing"
-	"xbase/xlog"
+
+	"github.com/radondb/xenon/src/config"
+
+	"github.com/radondb/xenon/src/model"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/stretchr/testify/assert"

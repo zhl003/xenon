@@ -9,8 +9,9 @@
 package raft
 
 import (
-	"model"
 	"sync/atomic"
+
+	"github.com/radondb/xenon/src/model"
 
 	"github.com/pkg/errors"
 )

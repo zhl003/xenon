@@ -9,9 +9,10 @@
 package raft
 
 import (
-	"model"
 	"sync"
 	"time"
+
+	"github.com/radondb/xenon/src/model"
 )
 
 // Candidate tuple.

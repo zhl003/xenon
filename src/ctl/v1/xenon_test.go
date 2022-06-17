@@ -12,9 +12,11 @@ import (
 	"encoding/base64"
 	"testing"
 
-	"server"
-	"xbase/common"
-	"xbase/xlog"
+	"github.com/radondb/xenon/src/xbase/common"
+
+	"github.com/radondb/xenon/src/server"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
 
 	"github.com/ant0ine/go-json-rest/rest"
 	"github.com/ant0ine/go-json-rest/rest/test"

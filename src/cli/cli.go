@@ -9,9 +9,10 @@
 package main
 
 import (
-	"cli/cmd"
 	"fmt"
 	"os"
+
+	"github.com/radondb/xenon/src/cli/cmd"
 
 	"github.com/spf13/cobra"
 )

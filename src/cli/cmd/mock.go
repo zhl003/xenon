@@ -1,8 +1,9 @@
 package cmd
 
 import (
-	"config"
 	"os"
+
+	"github.com/radondb/xenon/src/config"
 )
 
 var defaultConfig = config.Config{

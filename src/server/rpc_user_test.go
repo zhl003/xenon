@@ -9,11 +9,15 @@
 package server
 
 import (
-	"model"
-	"raft"
 	"testing"
-	"xbase/common"
-	"xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/common"
+
+	"github.com/radondb/xenon/src/raft"
+
+	"github.com/radondb/xenon/src/model"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
 
 	"github.com/stretchr/testify/assert"
 )

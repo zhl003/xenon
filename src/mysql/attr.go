@@ -10,7 +10,8 @@ package mysql
 
 import (
 	"fmt"
-	"model"
+
+	"github.com/radondb/xenon/src/model"
 )
 
 func (m *Mysql) setState(state model.MysqlState) {

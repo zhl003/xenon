@@ -10,11 +10,15 @@ package cmd
 
 import (
 	"fmt"
-	"raft"
-	"server"
 	"testing"
-	"xbase/common"
-	"xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/common"
+
+	"github.com/radondb/xenon/src/server"
+
+	"github.com/radondb/xenon/src/raft"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -155,7 +159,7 @@ func TestCLIClusterCommand(t *testing.T) {
 		// raft
 		{
 			cmd := NewClusterCommand()
-			_, err := executeCommand(cmd, "raft")
+			_, err := executeCommand(cmd, "github.com/radondb/xenon/src/raft")
 			assert.Nil(t, err)
 		}
 

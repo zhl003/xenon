@@ -11,8 +11,10 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
-	"xbase/common"
-	"xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/common"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
 
 	"github.com/spf13/cobra"
 )

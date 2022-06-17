@@ -9,17 +9,22 @@
 package server
 
 import (
-	"config"
-	"mysql"
-	"mysqld"
 	"os"
 	"os/signal"
-	"raft"
 	"runtime"
 	"syscall"
 	"time"
-	"xbase/xlog"
-	"xbase/xrpc"
+
+	"github.com/radondb/xenon/src/mysql"
+	"github.com/radondb/xenon/src/mysqld"
+
+	"github.com/radondb/xenon/src/config"
+
+	"github.com/radondb/xenon/src/raft"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/xrpc"
 )
 
 type RPCS struct {

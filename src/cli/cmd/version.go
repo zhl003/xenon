@@ -9,8 +9,9 @@
 package cmd
 
 import (
-	"build"
 	"fmt"
+
+	"github.com/radondb/xenon/src/build"
 
 	"github.com/spf13/cobra"
 )

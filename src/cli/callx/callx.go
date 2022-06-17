@@ -10,18 +10,23 @@ package callx
 
 import (
 	"bytes"
-	"config"
 	"fmt"
 	"io/ioutil"
-	"model"
 	"os"
-	"raft"
 	"strconv"
 	"strings"
 	"text/tabwriter"
 	"time"
-	"xbase/xlog"
-	"xbase/xrpc"
+
+	"github.com/radondb/xenon/src/config"
+
+	"github.com/radondb/xenon/src/raft"
+
+	"github.com/radondb/xenon/src/model"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/xrpc"
 
 	"github.com/olekukonko/tablewriter"
 )

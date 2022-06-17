@@ -9,7 +9,7 @@
 package mysql
 
 import (
-	"model"
+	"github.com/radondb/xenon/src/model"
 )
 
 // MysqlRPC tuple.

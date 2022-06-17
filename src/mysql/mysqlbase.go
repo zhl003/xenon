@@ -11,9 +11,10 @@ package mysql
 import (
 	"database/sql"
 	"fmt"
-	"model"
 	"strconv"
 	"strings"
+
+	"github.com/radondb/xenon/src/model"
 
 	"github.com/pkg/errors"
 )

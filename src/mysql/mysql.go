@@ -9,14 +9,18 @@
 package mysql
 
 import (
-	"config"
 	"database/sql"
 	"fmt"
-	"model"
 	"sync"
 	"time"
-	"xbase/common"
-	"xbase/xlog"
+
+	"github.com/radondb/xenon/src/xbase/common"
+
+	"github.com/radondb/xenon/src/config"
+
+	"github.com/radondb/xenon/src/model"
+
+	"github.com/radondb/xenon/src/xbase/xlog"
 )
 
 type (

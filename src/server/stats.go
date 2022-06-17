@@ -9,8 +9,9 @@
 package server
 
 import (
-	"model"
 	"time"
+
+	"github.com/radondb/xenon/src/model"
 )
 
 func (s *Server) getStats() *model.ServerStats {

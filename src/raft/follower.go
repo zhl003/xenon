@@ -9,9 +9,10 @@
 package raft
 
 import (
-	"model"
 	"strings"
 	"sync"
+
+	"github.com/radondb/xenon/src/model"
 )
 
 // Follower tuple.

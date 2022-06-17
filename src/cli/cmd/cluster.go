@@ -10,19 +10,23 @@ package cmd
 
 import (
 	"bufio"
-	"cli/callx"
 	"encoding/json"
 	"fmt"
-	"model"
 	"net"
 	"os"
 	"path"
 	"path/filepath"
-	"raft"
 	"regexp"
 	"sort"
 	"strings"
-	"xbase/common"
+
+	"github.com/radondb/xenon/src/cli/callx"
+
+	"github.com/radondb/xenon/src/xbase/common"
+
+	"github.com/radondb/xenon/src/raft"
+
+	"github.com/radondb/xenon/src/model"
 
 	"github.com/spf13/cobra"
 )
@@ -309,7 +313,7 @@ func NewClusterStatusJsonCommand() *cobra.Command {
 func clusterStatusJsonCommandFn(cmd *cobra.Command, args []string) {
 	type Status struct {
 		Id          string `json:"id"`
-		Raft        string `json:"raft"`
+		Raft        string `json:"github.com/radondb/xenon/src/raft"`
 		MysqldInfo  string `json:"mysqld-info"`
 		MonitorInfo string `json:"monitor-info"`
 		BackupInfo  string `json:"backup-info"`
@@ -540,7 +544,7 @@ func clusterMysqlCommandFn(cmd *cobra.Command, args []string) {
 // raft
 func NewClusterRaftCommand() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "raft",
+		Use:   "github.com/radondb/xenon/src/raft",
 		Short: "show cluster raft status",
 		Run:   clusterRaftCommandFn,
 	}
