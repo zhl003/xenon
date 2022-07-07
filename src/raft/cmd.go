@@ -43,3 +43,19 @@ func (r *Raft) leaderStopShellCommand() error {
 	r.WARNING("leaderStopShellCommand[%v].done", args)
 	return nil
 }
+
+// leaderFailoverShellCommand executes the shell commands
+// when leader failover, fence mysqld
+func (r *Raft) leaderFailoverShellCommand() error {
+	args := []string{
+		"-c",
+		r.conf.LeaderFenceCommand,
+	}
+
+	if out, err := r.cmd.RunCommand(bash, args); err != nil {
+		r.ERROR("leaderFailoverShellCommand[%v].out[%v].error[%+v]", args, out, err)
+		return err
+	}
+	r.WARNING("leaderFailoverShellCommand[%v].done", args)
+	return nil
+}

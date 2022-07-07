@@ -73,6 +73,9 @@ type RaftConfig struct {
 	// MUST: set in init
 	// the shell command when leader stop
 	LeaderStopCommand string `json:"leader-stop-command"`
+	// MUST: set in init
+	// the shell command when leader stop
+	LeaderFenceCommand string `json:"leader-fence-command"`
 
 	// if true, xenon binlog-purge will be skipped, default is false.
 	PurgeBinlogDisabled bool `json:"purge-binlog-disabled"`
