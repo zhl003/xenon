@@ -352,8 +352,8 @@ func (r *Leader) processPingRequest(req *model.RaftRPCRequest) *model.RaftRPCRes
 }
 
 func (r *Leader) degradeToFollower() {
-	r.WARNING("degrade.to.follower.stop.the.vip...")
-	if err := r.leaderStopShellCommand(); err != nil {
+	r.WARNING("degrade.to.follower.fence.the.leader...")
+	if err := r.leaderFailoverShellCommand(); err != nil {
 		r.ERROR("stopshell.error[%v]", err)
 	}
 
