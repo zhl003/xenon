@@ -9,6 +9,10 @@
 package config
 
 import (
+	"crypto/aes"
+	"crypto/cipher"
+	"crypto/rand"
+	"encoding/base64"
 	"encoding/json"
 	"io"
 	"io/ioutil"
@@ -27,6 +31,8 @@ type ServerConfig struct {
 	// HTTP APIs address.
 	PeerAddress string `json:"peer-address,omitempty"`
 }
+
+var key = []byte("xenon-mysql-key-32-bytes")
 
 func DefaultServerConfig() *ServerConfig {
 	return &ServerConfig{
@@ -377,7 +383,11 @@ func LoadConfig(path string) (*Config, error) {
 	if err != nil {
 		return nil, errors.WithStack(err)
 	}
-	return parseConfig(data)
+	decryptedData, err := decrypt(data, key)
+	if err != nil {
+		return nil, errors.WithStack(err)
+	}
+	return parseConfig(decryptedData)
 }
 
 func WriteConfig(path string, conf *Config) error {
@@ -397,13 +407,52 @@ func WriteConfig(path string, conf *Config) error {
 		return errors.WithStack(err)
 	}
 
-	n, err := f.Write(b)
+	encryptedData, err := encrypt(b, key)
 	if err != nil {
 		return errors.WithStack(err)
 	}
 
-	if n != len(b) {
+	n, err := f.Write(encryptedData)
+	if err != nil {
+		return errors.WithStack(err)
+	}
+
+	if n != len(encryptedData) {
 		return errors.WithStack(io.ErrShortWrite)
 	}
 	return nil
+}
+
+func decrypt(data []byte, key []byte) ([]byte, error) {
+	block, err := aes.NewCipher(key)
+	if err != nil {
+		return nil, errors.WithStack(err)
+	}
+	ciphertext, err := base64.StdEncoding.DecodeString(string(data))
+	if err != nil {
+		return nil, errors.WithStack(err)
+	}
+	if len(ciphertext) < aes.BlockSize {
+		return nil, errors.New("ciphertext too short")
+	}
+	iv := ciphertext[:aes.BlockSize]
+	ciphertext = ciphertext[aes.BlockSize:]
+	stream := cipher.NewCFBDecrypter(block, iv)
+	stream.XORKeyStream(ciphertext, ciphertext)
+	return ciphertext, nil
+}
+
+func encrypt(data []byte, key []byte) ([]byte, error) {
+	block, err := aes.NewCipher(key)
+	if err != nil {
+		return nil, errors.WithStack(err)
+	}
+	ciphertext := make([]byte, aes.BlockSize+len(data))
+	iv := ciphertext[:aes.BlockSize]
+	if _, err := io.ReadFull(rand.Reader, iv); err != nil {
+		return nil, errors.WithStack(err)
+	}
+	stream := cipher.NewCFBEncrypter(block, iv)
+	stream.XORKeyStream(ciphertext[aes.BlockSize:], data)
+	return []byte(base64.StdEncoding.EncodeToString(ciphertext)), nil
 }

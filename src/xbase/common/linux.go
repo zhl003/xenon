@@ -12,17 +12,20 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	"github.com/pkg/errors"
 	"io"
+	"os"
 	"os/exec"
 	"strings"
 	"sync/atomic"
 	"time"
 	"xbase/xlog"
+
+	"github.com/pkg/errors"
 )
 
 func RunCommand(cmds string, args ...string) (string, error) {
 	cmd := exec.Command(cmds, args...)
+	cmd.Env = append(os.Environ(), "TERM=xterm")
 	outs, err := cmd.CombinedOutput()
 	if err != nil {
 		return strings.Join(cmd.Args, " ") + string(outs), err
