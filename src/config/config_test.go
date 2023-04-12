@@ -96,5 +96,5 @@ func TestLoadConfig(t *testing.T) {
 	got, err := LoadConfig(path)
 	assert.Nil(t, err)
 	assert.Equal(t, want, got)
-	os.Remove(path)
+	// os.Remove(path)
 }

@@ -71,8 +71,8 @@ func main() {
 	log.Info("main: tag=[%s], git=[%s], goversion=[%s], builddate=[%s]",
 		build.Tag, build.Git, build.GoVersion, build.Time)
 	log.Warning("xenon.conf.raft:[%+v]", conf.Raft)
-	log.Warning("xenon.conf.mysql:[%+v]", conf.Mysql)
-	log.Warning("xenon.conf.mysqld:[%+v]", conf.Backup)
+	// log.Warning("xenon.conf.mysql:[%+v]", conf.Mysql)
+	// log.Warning("xenon.conf.mysqld:[%+v]", conf.Backup)
 
 	// server
 	server := server.NewServer(conf, log, state)
